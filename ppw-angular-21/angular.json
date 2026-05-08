@@ -3,17 +3,13 @@
   "version": 1,
   "cli": {
     "packageManager": "pnpm",
-    "analytics": "36294779-a353-4316-87d5-9bb207e908ea"
+    "analytics": "3a965d26-6ae7-44e5-b791-fa8ce8bc3632"
   },
   "newProjectRoot": "projects",
   "projects": {
     "ppw-angular-21": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,14 +19,15 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": [
+              "src/styles.css"
+            ]
           },
           "configurations": {
             "production": {
