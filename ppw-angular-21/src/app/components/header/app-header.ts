@@ -10,7 +10,6 @@ import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/c
 export class AppHeader {
   readonly brand = signal("ppw-angular");
   readonly showInfo = signal(false);
-
   readonly toggleLabel = computed(() => this.showInfo() ? "Ocultar info" : "Mostrar info");
     
   changeBrand(): void {
