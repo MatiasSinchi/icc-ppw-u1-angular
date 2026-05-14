@@ -1,0 +1,41 @@
+<section class="profile-container">
+  <!-- Datos básicos interpolados -->
+  <h1>{{ fullName() }}</h1>
+  <p>Edad: {{ age() }}</p>
+
+  <!-- Botón de actualización[cite: 1] -->
+  <button type="button" (click)="changeData()">Cambiar datos</button>
+
+  <hr>
+
+  <!-- Renderizado de habilidades con @if y @for[cite: 1] -->
+  <h3>Habilidades:</h3>
+  @if (skills().length > 0) {
+    <ul>
+      @for (skill of skills(); track skill) {
+        <li>{{ skill }}</li>
+      }
+    </ul>
+  } @else {
+    <p>No hay habilidades registradas.</p>
+  }
+
+  <hr>
+
+  <!-- Categoría de edad con @switch[cite: 1] -->
+  <h3>Categoría:</h3>
+  @switch (ageCategory()) {
+    @case ('minor') {
+      <p>Menor de edad</p>
+    }
+    @case ('young') {
+      <p>Joven</p>
+    }
+    @case ('adult') {
+      <p>Adulto</p>
+    }
+    @default {
+      <p>Senior</p>
+    }
+  }
+</section>
